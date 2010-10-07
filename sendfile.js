@@ -10,7 +10,7 @@ var path      = require('path'),
 module.exports = function (dir, prefix) {
   return function (request, response, next) {
     var filename,
-        pathname = url.parse(request.url);
+        pathname = url.parse(request.url).pathname;
 
     pathname = pathname.replace(/\.\.+/g, '.');
 
