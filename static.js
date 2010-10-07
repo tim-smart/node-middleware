@@ -44,7 +44,7 @@ module.exports = function (dir, prefix) {
       }
 
       // Stream the file
-      var headers = util.mergeDefaultHeaders({
+      var headers = utils.mergeDefaultHeaders({
         'Content-Type': utils.mime.type(filename),
         'Content-Length': stat.size,
         'Last-Modified': stat.mtime.toUTCString(),
