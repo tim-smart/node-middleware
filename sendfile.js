@@ -74,7 +74,7 @@ module.exports = function (dir, prefix) {
         response._headerSent = true;
 
         // sendfile takes length, not end
-        read_opts.end = read_opts.end - read_opts.start;
+        read_opts.end = read_opts.end - read_opts.start + 1;
 
         // sendfile()
         // Note this will skip all other layers (like gzip), so make sure this is
