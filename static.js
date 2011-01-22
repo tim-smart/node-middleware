@@ -2,7 +2,7 @@
 var path  = require('path'),
     fs    = require('fs'),
     url   = require('url'),
-    utils = require('./util'),
+    utils = require('./utils'),
     sys   = require('sys');
 
 module.exports = function (dir, prefix) {

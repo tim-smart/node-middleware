@@ -1,5 +1,5 @@
 // Note to contributers.
-// Feel free to add util methods if you feel they are valuable.
+// Feel free to add utils methods if you feel they are valuable.
 
 // This pump doesn't close the write stream, so you can end the writable whenever
 exports.pump = function pump (readable, writable, cb) {

@@ -1,7 +1,7 @@
 var path      = require('path'),
     fs        = require('fs'),
     url       = require('url'),
-    utils     = require('./util'),
+    utils     = require('./utils'),
     FreeList  = require('freelist').FreeList,
     IOWatcher = process.binding('io_watcher').IOWatcher,
     constants = require('constants'),

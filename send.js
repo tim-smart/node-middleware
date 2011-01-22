@@ -1,4 +1,4 @@
-var util = require('./util');
+var util = require('./utils');
 
 module.exports = function (statusCode, headers) {
   statusCode = statusCode || 200;

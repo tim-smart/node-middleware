@@ -11,7 +11,7 @@ for (var i = 0, il = list.length; i < il; i++) {
 
   if ('.js' !== path.extname(file) ||
       file === 'index.js' ||
-      file === 'util.js') {
+      file === 'utils.js') {
     continue;
   }
 
