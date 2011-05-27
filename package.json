@@ -1,0 +1,10 @@
+{ "name":    "middleware"
+, "version": "0.1.0"
+, "author":  "Tim Smart <tim@fostle.com>"
+, "repository":
+  { "type": "git"
+  , "url":  "git://github.com/Tim-Smart/node-middleware.git"
+  }
+, "main":    "./"
+, "licenses": [{ "type": "MIT" }]
+}
