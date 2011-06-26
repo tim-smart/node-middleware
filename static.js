@@ -36,10 +36,11 @@ module.exports = function (dir, prefix) {
       if (request.headers['if-modified-since']) {
         var if_modified_since = new Date(request.headers['if-modified-since']);
         if (stat.mtime.getTime() <= if_modified_since.getTime()) {
-          return response.send(304, null, {
+          response.writeHead(304, utils.mergeDefaultHeaders({
             'Expires': new Date(Date.now() + 31536000000).toUTCString(),
             'Cache-Control': 'public max-age=' + 31536000
-          });
+          }));
+          return response.end();
         }
       }
 
@@ -62,12 +63,12 @@ module.exports = function (dir, prefix) {
       }
       if (request.method === 'HEAD') return response.end();
 
-
       var file_stream = fs.createReadStream(filename, read_opts);
       file_stream.addListener('error', function (error) {
+        file_stream.end();
         next(error);
       });
-      sys.pump(file_stream, response);
+      file_stream.pipe(response);
     });
   };
 };

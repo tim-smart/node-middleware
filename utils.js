@@ -33,14 +33,12 @@ exports.mergeDefaultHeaders = function (headers) {
 
   for (var i = 0, il = defaultHeaderKeys.length; i < il; i++) {
     key = defaultHeaderKeys[i];
-
     ret[key] = defaultHeaders[key];
   }
 
   keys = Object.keys(headers);
   for (i = 0, il = keys.length; i < il; i++) {
     key = keys[i];
-
     ret[key] = headers[key];
   }
 

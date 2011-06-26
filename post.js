@@ -12,6 +12,7 @@ module.exports = function () {
 
     request.addListener('end', function () {
       response.body = data;
+      request.body  = data;
       next();
     });
   };

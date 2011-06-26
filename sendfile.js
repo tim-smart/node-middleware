@@ -40,10 +40,10 @@ module.exports = function (dir, prefix) {
         if (request.headers['if-modified-since']) {
           var if_modified_since = new Date(request.headers['if-modified-since']);
           if (stat.mtime.getTime() <= if_modified_since.getTime()) {
-            response.writeHead(304, {
+            response.writeHead(304, utils.mergeDefaultHeaders({
               'Expires': new Date(Date.now() + 31536000000).toUTCString(),
               'Cache-Control': 'public max-age=' + 31536000
-            });
+            }));
             return response.end();
           }
         }
