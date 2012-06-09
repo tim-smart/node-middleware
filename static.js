@@ -3,7 +3,6 @@ var path  = require('path'),
     fs    = require('fs'),
     url   = require('url'),
     utils = require('./utils'),
-    sys   = require('sys');
 
 module.exports = function (dir, prefix) {
   return function (request, response, next) {
