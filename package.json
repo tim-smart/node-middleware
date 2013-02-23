@@ -1,5 +1,5 @@
 { "name":    "middleware"
-, "version": "0.1.3"
+, "version": "1.0.0"
 , "author":  "Tim Smart <tim@fostle.com>"
 , "repository":
   { "type": "git"
